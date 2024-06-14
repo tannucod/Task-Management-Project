@@ -1,0 +1,111 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Task Management</title>
+    <link rel="stylesheet" type="text/css" href="https://bootswatch.com/5/litera/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+    <style>
+        /* Internal CSS for different color scheme */
+        body {
+            background-color:#ffff; 
+        }
+        .navbar {
+            background-color: #020303; 
+        }
+        .navbar-brand, .navbar-nav .nav-link {
+            color: #fff; 
+        }
+        .btn-primary {
+            background-color: #393e46; 
+            border-color: #393e46; 
+            margin-right: 10px;
+        }
+        .btn-primary:hover {
+            background-color: #4e555b; 
+            border-color: #4e555b; 
+        }
+        .main-heading {
+            font-size: 28px; 
+        }
+        .text-center {
+            margin-top: 20px; 
+        }
+        .small-image {
+            width: 40px; /* Adjust the width as needed */
+            height: auto; /* Automatically adjust the height to maintain aspect ratio */
+        }
+        
+        .footer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2rem 9%;
+    background-color:#151b25;
+    height: 4rem;
+
+}
+.footer-text p{
+    color: #ffff;
+font-size: 1.6rem;
+}
+
+.footer-iconTop a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: .8rem;
+    background-color:black;
+    border-radius: .8rem;
+    transition: .3s ease;
+}
+
+    </style>
+    
+</head>
+
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-slate-400 justify-content-center">
+    <a class="navbar-brand main-heading" href="#">Task Management</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse text-center" id="navbarNavDropdown">
+        <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+                <a class="btn btn-primary navbar-btn" href="{% url 'register' %}">Register</a>
+            </li>
+            <li class="nav-item">
+                <a class="btn btn-primary navbar-btn" href="{% url 'login' %}">Login</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div class="text-center">
+    <h3> Task Management System!!.</h3>
+    <p class="sub-heading text-center mt-3">Welcome to our Task Management System</p>
+    
+    <img src="{% static 'images/task1.avif' %}" alt="Image" class="img-fluid ">
+    <!--<img src="{% static 'images/img.jpg' %}" alt="Image" class="img-fluid "> -->
+</div>
+
+    <br />
+</div>
+<!-- Footer design -->
+<footer class="footer">
+    <div class="footer-text">
+        <p>copyright &copy; 2024 by Tannu bk| All rights reserved</p>
+    </div>
+        </footer>
+</body>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+</html>

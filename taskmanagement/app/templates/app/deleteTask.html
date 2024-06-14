@@ -1,0 +1,60 @@
+{% load static %}
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />       
+    <link rel="stylesheet" type="text/css" href="https://bootswatch.com/5/lumen/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">   
+    <title>Pro-Delete Task</title>    
+    <style>
+        body {
+            background-color: #87CEEB; /* Set background color to a light gray */
+        }
+        .card {
+            margin-top: 50px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        .card-header {
+            background-color: #007bff; 
+            color: #fff; 
+        }
+        .btn-info {
+            background-color: #17a2b8; 
+            border-color: #17a2b8; 
+        }
+        .btn-info:hover {
+            background-color: #138496; 
+            border-color: #138496; 
+        }
+        .btn-primary {
+            background-color: #28a745; 
+            border-color: #28a745; 
+        }
+        .btn-primary:hover {
+            background-color: #218838; 
+            border-color: #218838; 
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+            <h2 class="text-center"> Delete Task</h2>
+        </div>
+        <div class="card-body">
+            <form action="" method="POST">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <p>Are you sure you want to delete "{{object}}"?</p>
+                <a href="{% url 'viewtask' %}" class="btn btn-info" style= "margin-right: 10px;"> Go Back</a>
+                
+                <input type="submit" value="Delete Task" class="btn btn-danger">
+            </form>
+            <br>
+            
+        </div>
+    </div>
+</div>
+</body>
+</html>

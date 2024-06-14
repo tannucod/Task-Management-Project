@@ -1,0 +1,52 @@
+{% load static %}
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />       
+    <link rel="stylesheet" type="text/css" href="https://bootswatch.com/5/flatly/bootstrap.min.css"> 
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}"> 
+    <title>Pro-Create Task</title>    
+    <style>
+        body {
+            background-color:  #0c0c0c; 
+        }
+        .card {
+            border-radius: 10px; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+        }
+        .card-header {
+            background-color: #909192; 
+            color: #fff; 
+            border-radius: 10px 10px 0 0; 
+        }
+        .card-body {
+            padding: 20px; 
+        }
+        .btn-success {
+            background-color: #28a745; 
+            border-color: #28a745; 
+        }
+        .btn-success:hover {
+            background-color: #218838; 
+            border-color: #218838; 
+        }
+    </style>  
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="card">
+            <div class="card-header">
+                <h2 class="text-center">Create Task</h2>
+            </div>
+            <div class="card-body">
+                <form action="" method="POST"  novalidate>
+                    {% csrf_token %}
+                    {{ form.as_p|safe }}
+                    <input type="submit" value="Create Task" class="btn btn-success btn-block mt-3"> 
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
